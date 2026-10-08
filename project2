@@ -1,0 +1,16 @@
+student_name="Zena" 
+student_age=18
+student_gpa=4
+is_enrolled=True
+print(type(student_name))
+print(student_name)
+print(type(student_age))
+print(student_age) 
+print(type(student_gpa))
+print(student_gpa) 
+print(type(is_enrolled))
+print(is_enrolled)
+
+
+
+
