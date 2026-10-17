@@ -23,3 +23,4 @@ print(f"Your balance is: {update}")
 put=float(input("How much do you want to put : "))
 print(f"Your put is: {put} ")
 print(f"Your money now is: {balance+put}")
+#three questions trying different ways
