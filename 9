@@ -1,0 +1,50 @@
+students={
+    "CS":{"name":"Zena","Id":100},
+    "IT":{"name":"Abeer","Id":200}
+}
+def dispaly():
+    all_keys=students.keys()
+    print(f"ALL Keys: {all_keys}")
+    #for value in students:
+     # print(f"{value}: {students[value]}")
+        #another way
+    print("All values :")
+    for value in students.values():
+         print(f"{value.get("name")},{value.get("Id")}")
+def add_or_update():
+    student_key=input("Enter Key:")
+    if student_key in students:
+        print("The key already exists ,Update the value")
+    else:
+        print("The key does not exist ,Create the key")
+        name=input("Enter your name:")
+        Id=input("Enter your Id:")
+        students[student_key]={"name":name,"Id":Id}
+        print(f"Student {student_key} added Successfully ")
+def delete():
+    student_key=input("Enter Key:")
+    if student_key in students:
+        del students[student_key]
+        print(f"Student{student_key} deleted Successfully")
+    else:
+        print("The key does not exist !")
+
+
+
+while True:
+    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    print("1.display the data in the dictionary")
+    print("2.add and update the data")
+    print("3.delete the data")
+    print("4.Exit")
+    choice=int(input("Enter your choice:"))
+    if choice==1:
+       dispaly()
+    elif choice==2:
+        add_or_update()
+    elif choice==3:
+        delete()
+    elif choice==4:
+        break
+    else:
+        print("Invalid Choice")
